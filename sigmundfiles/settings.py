@@ -54,18 +54,26 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'sigmundfiles.wsgi.application'
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'sigmundfiles',
+#         'USER': 'sigmundfiles',
+#         'PASSWORD': 'Chihuahua2',
+#         'HOST': 'mysql.itch2.org',
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+#             'charset': 'utf8mb4',
+#         }
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sigmundfiles',
-        'USER': 'sigmundfiles',
-        'PASSWORD': 'Chihuahua2',
-        'HOST': 'mysql.itch2.org',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-            'charset': 'utf8mb4',
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -84,7 +92,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = 'accounts.Psychologist'
+# AUTH_USER_MODEL = 'accounts.Psychologist'
 
 LANGUAGE_CODE = 'es-mx'
 TIME_ZONE = 'America/Mexico_City'

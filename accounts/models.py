@@ -15,6 +15,23 @@ class Psychologist(AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']  # username sigue siendo requerido por AbstractUser
 
+
+    groups = models.ManyToManyField(
+        'auth.Group',
+        related_name='psychologist_users',
+        blank=True,
+        help_text='The groups this user belongs to.',
+        verbose_name='groups'
+    )
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        related_name='psychologist_user_permissions',
+        blank=True,
+        help_text='Specific permissions for this user.',
+        verbose_name='user permissions'
+    )
+
+
     class Meta:
         verbose_name = 'Psychologist'
         verbose_name_plural = 'Psychologists'

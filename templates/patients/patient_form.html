@@ -1,0 +1,24 @@
+{% extends "base_dashboard.html" %}
+{% load static %}
+{% load json_tags %}
+
+{% block title %}{% if form.instance.pk %}Editar{% else %}Nuevo{% endif %} Paciente - SigmundFiles{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/patients/form.css' %}">
+<link rel="stylesheet" href="{% static 'css/patients/photo.css' %}">
+<link rel="stylesheet" href="{% static 'css/patients/family.css' %}">
+<link rel="stylesheet" href="{% static 'css/patients/medical.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="patient-form-container">
+    <!-- ... resto del código ... -->
+
+    {% if existing_data %}
+    {{ existing_data|json_script:"existingData" }}
+    {% endif %}
+
+    <!-- ... resto del código ... -->
+</div>
+{% endblock %}

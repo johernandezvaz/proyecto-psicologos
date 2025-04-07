@@ -1,4 +1,4 @@
-from patients.models import WordCloud, HandwrittenNote
+from patients.models import WordCloud, Note
 from patients.services.text_analysis_service import TextAnalysisService
 
 class WordCloudService:
@@ -66,7 +66,7 @@ class WordCloudService:
         """
         try:
             # Verificar si hay notas en el sistema
-            if HandwrittenNote.objects.exists():
+            if Note.objects.exists():
                 self._update_cloud(None, frequencies, 'global')
             else:
                 # Si no hay notas, eliminar la nube global

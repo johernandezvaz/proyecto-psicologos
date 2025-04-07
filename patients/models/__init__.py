@@ -6,7 +6,7 @@ from accounts.models import Psychologist
 from patients.models.patient import Patient
 from patients.models.family import Parent, Sibling, HouseholdMember
 from patients.models.medical import MedicalHistory
-from patients.models.notes import HandwrittenNote, WordCloud
+from patients.models.notes import Note, WordCloud
 
 __all__ = [
     'Patient',
@@ -14,6 +14,6 @@ __all__ = [
     'Sibling',
     'HouseholdMember',
     'MedicalHistory',
-    'HandwrittenNote',
+    'Note',
     'WordCloud'
 ]

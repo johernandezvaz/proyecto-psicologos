@@ -1,14 +1,14 @@
 {% extends "base_landing.html" %}
 {% load static %}
 
-{% block title %}SigmundFiles - Gestión Digital de Expedientes Psicológicos{% endblock %}
+{% block title %}KleinNotes - Gestión Digital de Expedientes Psicológicos{% endblock %}
 
 {% block content %}
 <div class="landing-page">
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>SigmundFiles</h1>
+            <h1>KleinNotes</h1>
             <p class="hero-subtitle">La plataforma digital que revoluciona la gestión de expedientes psicológicos</p>
             <div class="hero-actions">
                 {% if user.is_authenticated %}
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="hero-image">
-            <img src="{% static 'img/landing/hero-illustration.svg' %}" alt="SigmundFiles Platform">
+            <img src="{% static 'img/landing/hero-illustration.svg' %}" alt="KleinNotes Platform">
         </div>
     </section>
 

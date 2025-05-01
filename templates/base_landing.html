@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}SigmundFiles{% endblock %}</title>
+    <title>{% block title %}KleinNotes{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/components/buttons.css' %}">
@@ -13,8 +13,8 @@
     <header class="landing-header">
         <nav class="landing-nav">
             <div class="nav-logo">
-                <img src="{% static 'img/logo.png' %}" alt="SigmundFiles Logo" class="nav-logo-img">
-                <span class="nav-logo-text">SigmundFiles</span>
+                <img src="{% static 'img/logo.png' %}" alt="KleinNotes Logo" class="nav-logo-img">
+                <span class="nav-logo-text">KleinNotes</span>
             </div>
             <div class="nav-links">
                 {% if user.is_authenticated %}
@@ -34,10 +34,10 @@
     <footer class="landing-footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="{% static 'img/logo.png' %}" alt="SigmundFiles Logo" class="footer-logo-img">
-                <span>SigmundFiles</span>
+                <img src="{% static 'img/logo.png' %}" alt="KleinNotes Logo" class="footer-logo-img">
+                <span>KleinNotes</span>
             </div>
-            <p class="footer-copyright">&copy; {% now "Y" %} SigmundFiles. Todos los derechos reservados.</p>
+            <p class="footer-copyright">&copy; {% now "Y" %} KleinNotes. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>

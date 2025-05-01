@@ -1,12 +1,12 @@
 /* Variables globales */
 :root {
-    --primary-blue: #328ec7;
-    --primary-mint: #82f2c2;
-    --text-dark: #2d3748;
-    --text-light: #718096;
-    --white: #ffffff;
+    --primary-blue: #2daec6;
+    --primary-dark: #14335e;
+    --white: #feffff;
+    --text-dark: #14335e;
+    --text-light: #6b7280;
     --error: #e53e3e;
-    --gradient: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-mint) 100%);
+    --gradient: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
     --sidebar-width: 280px;
 }
 
@@ -66,7 +66,7 @@ body {
 .form-input:focus {
     outline: none;
     border-color: var(--primary-blue);
-    box-shadow: 0 0 0 3px rgba(50, 142, 199, 0.1);
+    box-shadow: 0 0 0 3px rgba(45, 174, 198, 0.1);
 }
 
 /* Botones base */

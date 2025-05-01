@@ -5,6 +5,7 @@ from patients.models import Patient
 class Note(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='notes')
     content = models.TextField(verbose_name='Contenido de la nota')
+    image = models.ImageField(upload_to='notes_images/', blank=True, null=True, verbose_name='Imagen de la nota')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     

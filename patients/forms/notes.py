@@ -4,11 +4,16 @@ from patients.models import Note
 class NoteForm(forms.ModelForm):
     class Meta:
         model = Note
-        fields = ['content']
+        fields = ['content', 'image']
         widgets = {
             'content': forms.Textarea(attrs={
                 'class': 'form-input',
                 'rows': 10,
-                'placeholder': 'Dicta o escribe tus notas aquí...'
+                'placeholder': 'Escribe o dicta tus notas aquí...'
+            }),
+            'image': forms.FileInput(attrs={
+                'class': 'form-input',
+                'accept': 'image/*',
+                'style': 'display: none;'
             })
         }
